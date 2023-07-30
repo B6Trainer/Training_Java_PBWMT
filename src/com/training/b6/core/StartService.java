@@ -1,6 +1,7 @@
 package com.training.b6.core;
 
 import com.training.b6.helpers.Constants;
+import com.training.b6.helpers.CustomAppException;
 import com.training.b6.helpers.LogHelper;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -12,12 +13,17 @@ public class StartService implements Constants {
     public static void main(String[] args) {
 
 
-        LogHelper.printOnConsole(className," : Hello and welcome!");
+
+        LogHelper.printOnConsole(className," : Hello and welcome! Service has started");
         Controller conObj = new Controller();
 
-        conObj.execute(EXECUTE_AUTOCLOSE);
-
-
+        try {
+            conObj.execute(EXECUTE_FILE_CONNECTION);
+            //conObj.execute(EXECUTE_AUTOCLOSE);
+            //conObj.execute(Constants.EXECUTE_NUMBER_ADD);
+        } catch (CustomAppException e) {
+            LogHelper.printOnConsole(className,e.getCustomMessage());
+        }
 
     }
 
