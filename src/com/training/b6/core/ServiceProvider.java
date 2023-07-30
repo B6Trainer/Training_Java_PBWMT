@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class ServiceProvider {
 
-    private static final String className=ServiceProvider.class.getName();
+    private static final String className=ServiceProvider.class.getSimpleName();
 
 
     public boolean instantiateFileConnection() throws IOException {

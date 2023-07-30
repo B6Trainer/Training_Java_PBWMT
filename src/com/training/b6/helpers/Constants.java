@@ -10,4 +10,6 @@ public interface Constants {
     
     public final int EXECUTE_NUMBER_SUBTRACT =4;
 
+    public final int EXECUTE_INITIALISE_APPCONFIG =5;
+
 }

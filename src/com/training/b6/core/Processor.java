@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Processor {
 
-    private static final String className=Processor.class.getName();
+    private static final String className=Processor.class.getSimpleName();
 
     private static final ServiceProvider serviceObj = new ServiceProvider();
 

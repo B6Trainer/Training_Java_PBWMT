@@ -10,7 +10,7 @@ import java.util.logging.SimpleFormatter;
 public class LoggerService {
     public static void main(String[] args) {
         // Create a Logger instance
-        Logger logger = Logger.getLogger(LoggerService.class.getName());
+        Logger logger = Logger.getLogger(LoggerService.class.getSimpleName());
 
         // Set the log level to control which messages are logged
         logger.setLevel(Level.INFO);
