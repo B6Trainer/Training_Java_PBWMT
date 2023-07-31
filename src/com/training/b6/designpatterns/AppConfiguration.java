@@ -34,10 +34,14 @@ public class AppConfiguration {
 
     private static void loadConfiguration() throws IOException {
         properties = new Properties();
+        String APP_HOME =System.getenv("APP_HOME");
+        LogHelper.printOnConsole(className,"APP_HOME: " + APP_HOME);
+        properties.setProperty("APP_HOME",APP_HOME);
 
-        try (FileInputStream fileInputStream = new FileInputStream("E:/Training/Local Workspace/Training/Config/App.config")) {
+        String fileName=APP_HOME+"/Config/App.config";
+        try (FileInputStream fileInputStream = new FileInputStream(fileName)) {
             properties.load(fileInputStream);
-            LogHelper.printOnConsole(className,"Application configuration loaded successfully");
+            LogHelper.printOnConsole(className,"Application configuration loaded successfully from "+fileName);
         }finally {
 
         }

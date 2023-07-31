@@ -14,7 +14,11 @@ public class Controller implements Constants {
 
     private static AppConfiguration appConfiguration;
 
-
+    /**
+     * Controller's Entry method to service the request
+     * @param executeMethod
+     * @throws CustomAppException
+     */
     public void execute(int executeMethod) throws CustomAppException {
 
         try {
@@ -50,6 +54,8 @@ public class Controller implements Constants {
     }
 
     private void initialiseConfiguratuon() throws IOException {
+
+
         appConfiguration=AppConfiguration.getInstance();
         String appName=appConfiguration.getProperty("app.name");
         String appEnv=appConfiguration.getProperty("app.env");

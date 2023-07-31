@@ -12,6 +12,6 @@ public interface Constants {
 
     public final int EXECUTE_INITIALISE_APPCONFIG =5;
 
-    long card=1234_5678_9999l;
+    public String APP_HOME = null;
 
 }

@@ -10,12 +10,19 @@ public class StartService implements Constants {
 
     private static final String className=StartService.class.getSimpleName();
 
+
+    /**
+     * Main method of the application to start
+     * @param args String[]
+     */
     public static void main(String[] args) {
 
         LogHelper.printOnConsole(className," : Hello and welcome! Service has started");
         // Print CLASSPATH environment variable
         /*String classpath = System.getenv("CLASSPATH");
         System.out.println("CLASSPATH: " + classpath);*/
+
+
 
         Controller conObj = new Controller();
 
