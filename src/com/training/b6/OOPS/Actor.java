@@ -56,7 +56,7 @@ public abstract class Actor implements Citizen{
     public void payTax() {
         double taxAmount = bankAccount.getBalance()*0.3;
         bankAccount.reduceBalance(taxAmount);
-        USGovernment.payTax(getName(),(bankAccount.getBalance()));
+        USGovernment.payTax(getName(),(taxAmount));
     }
 
 }

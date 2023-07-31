@@ -1,14 +1,24 @@
 package com.training.b6.OOPS;
 
-import com.training.b6.helpers.LogHelper;
-
-public class FilmProducer {
+public class OOPSstory {
 
     public static void main(String[] args) {
 
-        //String _name, String _from , String _language
+
         Actor arnold = new Bodybuilder("Arnold","USA","English");
         Actor jackie = new MartialArtist("Jackie","China","Mandarin");
+
+        meetFilmProducer(arnold,jackie);
+        meetMyFriends(arnold,jackie);
+        meetTaxPayer(arnold,jackie);
+
+        OOPSLogHelper.printOnConsole(arnold.getName()+" - After Paying Tax my balance is: "+arnold.myBankBalance());
+        OOPSLogHelper.printOnConsole(jackie.getName()+" - After Paying Tax my balance is: "+jackie.myBankBalance());
+
+
+    }
+
+    private static void meetFilmProducer(Actor arnold, Actor jackie) {
 
         OOPSLogHelper.printOnConsole(arnold.whatisYourName());
         OOPSLogHelper.printOnConsole(arnold.whereAreYouFrom());
@@ -31,11 +41,7 @@ public class FilmProducer {
 
         OOPSLogHelper.printOnConsole(" Salary Paid----------------------------------------------------------");
 
-        meetMyFriends(arnold,jackie);
-        meetTaxPayer(arnold,jackie);
 
-        OOPSLogHelper.printOnConsole(arnold.getName()+" - After Paying Tax my balance is: "+arnold.myBankBalance());
-        OOPSLogHelper.printOnConsole(jackie.getName()+" - After Paying Tax my balance is: "+jackie.myBankBalance());
 
 
     }
