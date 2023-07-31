@@ -1,6 +1,6 @@
-package com.training.b6.helpers;
+package com.training.b6.OOPS;
 
-public class LogHelper {
+public class OOPSLogHelper {
 
     public static void printOnConsole(String message){
         System.out.println(" -> "+message);
