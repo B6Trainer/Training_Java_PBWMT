@@ -1,6 +1,5 @@
 package com.training.b6.core;
 
-import com.training.b6.designpatterns.AppConfiguration;
 import com.training.b6.helpers.Constants;
 import com.training.b6.helpers.CustomAppException;
 import com.training.b6.helpers.LogHelper;

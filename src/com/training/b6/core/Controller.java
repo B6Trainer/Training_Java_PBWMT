@@ -15,7 +15,6 @@ public class Controller implements Constants {
     private static AppConfiguration appConfiguration;
 
 
-
     public void execute(int executeMethod) throws CustomAppException {
 
         try {
