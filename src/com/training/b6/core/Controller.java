@@ -2,7 +2,7 @@ package com.training.b6.core;
 
 import com.training.b6.designpatterns.AppConfiguration;
 import com.training.b6.helpers.Constants;
-import com.training.b6.helpers.CustomAppException;
+import com.training.b6.exceptionhandling.CustomAppException;
 import com.training.b6.helpers.LogHelper;
 
 import java.io.IOException;
@@ -24,16 +24,17 @@ public class Controller implements Constants {
         try {
 
             switch (executeMethod) {
-                case EXECUTE_AUTOCLOSE:
-                    // Code block executed if expression matches Constants.EXECUTE_AUTOCLOSE
-                    executeAutoCloseExample();
-                    break;
                 case EXECUTE_FILE_CONNECTION:
                     // Code block executed if expression matches Constants.EXECUTE_FILE_CONNECTION
                     executeFileConnectionExample();
                     break;
-                case EXECUTE_NUMBER_ADD:
+                case EXECUTE_NUMBER_DIVIDE:
                     // Code block executed if expression matches Constants.EXECUTE_NUMBER_ADD
+                    divideNumber(100,0);
+                    break;
+                case EXECUTE_AUTOCLOSE:
+                    // Code block executed if expression matches Constants.EXECUTE_AUTOCLOSE
+                    executeAutoCloseExample();
                     break;
                 case EXECUTE_INITIALISE_APPCONFIG:
                     // Code block executed if expression matches Constants.EXECUTE_INITIALISE_APPCONFIG
@@ -46,15 +47,15 @@ public class Controller implements Constants {
             }
 
         }catch (Exception exc){
-            LogHelper.printOnConsole(className," Server Exception Occurred ",exc);
+            LogHelper.printOnConsole(className," Server Exception "+exc.getMessage(),exc);
             throw new CustomAppException("Internal Server error occurred, Please contact our support ",exc);
         }
 
 
     }
 
-    private void initialiseConfiguratuon() throws IOException {
 
+    private void initialiseConfiguratuon() throws IOException {
 
         appConfiguration=AppConfiguration.getInstance();
         String appName=appConfiguration.getProperty("app.name");
@@ -67,7 +68,7 @@ public class Controller implements Constants {
 
     private void executeAutoCloseExample(){
 
-        LogHelper.printOnConsole(className,"is Executing the execute method");
+        LogHelper.printOnConsole(className,"is Executing the executeAutoCloseExample method");
         procObj.checkAutocloseable();
     }
 
@@ -75,7 +76,13 @@ public class Controller implements Constants {
 
     private void executeFileConnectionExample() throws IOException {
 
-        LogHelper.printOnConsole(className,"is Executing the execute method");
+        LogHelper.printOnConsole(className,"is Executing the executeFileConnectionExample method");
         procObj.instantiateFileConnection();
+    }
+
+
+    private void divideNumber(int num, int div) {
+        LogHelper.printOnConsole(className,"is Executing the divideNumber method");
+        procObj.divideNumber(num,div);
     }
 }

@@ -1,6 +1,6 @@
 package com.training.b6.designpatterns;
 
-import com.training.b6.helpers.CustomAppException;
+import com.training.b6.exceptionhandling.CustomAppException;
 
 public interface EmployeeManagement {
 

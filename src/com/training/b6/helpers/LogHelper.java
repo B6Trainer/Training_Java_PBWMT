@@ -11,8 +11,8 @@ public class LogHelper {
     }
 
     public static void printOnConsole(String className, String message , Throwable thr) {
-        System.out.println(className+" : Exception : "+message);
         thr.printStackTrace();
+        System.out.println(className+" : Exception : "+message);
 
     }
 }

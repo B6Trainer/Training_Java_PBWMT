@@ -1,4 +1,4 @@
-package com.training.b6.helpers;
+package com.training.b6.exceptionhandling;
 
 public class CustomAppException extends Exception{
 

@@ -1,4 +1,4 @@
-package com.training.b6.helpers;
+package com.training.b6.exceptionhandling;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -12,6 +12,7 @@ public class DemoAutoClose implements Closeable{
     }
 
     public void CheckDemoObject() {
+
         System.out.println(this.getClass().getName()+" :  Hi, How are you, Thank you");
     }
 }

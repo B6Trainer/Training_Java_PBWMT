@@ -13,4 +13,7 @@ public class ServiceProvider {
 
     }
 
+    public float divideNumber(int num, int div) {
+        return num/div;
+    }
 }

@@ -1,7 +1,7 @@
 package com.training.b6.core;
 
 import com.training.b6.helpers.Constants;
-import com.training.b6.helpers.CustomAppException;
+import com.training.b6.exceptionhandling.CustomAppException;
 import com.training.b6.helpers.LogHelper;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -28,12 +28,14 @@ public class StartService implements Constants {
 
         try {
             conObj.execute(Constants.EXECUTE_INITIALISE_APPCONFIG);
-            //conObj.execute(EXECUTE_FILE_CONNECTION);
+            conObj.execute(EXECUTE_FILE_CONNECTION);
+            //conObj.execute(Constants.EXECUTE_NUMBER_DIVIDE);
             //conObj.execute(EXECUTE_AUTOCLOSE);
-            //conObj.execute(Constants.EXECUTE_NUMBER_ADD);
         } catch (CustomAppException e) {
             LogHelper.printOnConsole(className,e.getCustomMessage());
         }
+
+        LogHelper.printOnConsole(className," : Thank you! Service completed and stopped");
 
     }
 

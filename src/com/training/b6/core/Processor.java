@@ -1,6 +1,6 @@
 package com.training.b6.core;
 
-import com.training.b6.helpers.DemoAutoClose;
+import com.training.b6.exceptionhandling.DemoAutoClose;
 import com.training.b6.helpers.LogHelper;
 
 import java.io.IOException;
@@ -38,4 +38,9 @@ public class Processor {
         return true;
     }
 
+    public void divideNumber(int num, int div) {
+
+        float result = serviceObj.divideNumber(num,div);
+        LogHelper.printOnConsole(className," Division was successful and the result is "+result);
+    }
 }
