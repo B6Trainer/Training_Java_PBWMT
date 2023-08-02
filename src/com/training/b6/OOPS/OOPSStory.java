@@ -5,6 +5,9 @@ public class OOPSStory {
 
     public static void main(String[] args) {
 
+        String name_1="bala";
+        String name_2="bala";
+
         //String _name, int _age, String _country
         Actor arnold = new BodyBuilder("Arnold",60,"USA");
         Actor jackie = new MartialArts("Jackie", 58,"China");

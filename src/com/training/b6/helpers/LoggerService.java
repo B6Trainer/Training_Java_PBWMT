@@ -17,7 +17,7 @@ public class LoggerService {
 
         // Create a FileHandler to write log messages to a file
         try {
-            FileHandler fileHandler = new FileHandler("E:/Training/logs/javalogs.log");
+            FileHandler fileHandler = new FileHandler("C:/software/Projects/Local Workspace/GitHubLocation/Logs/javalogs.log");
             logger.addHandler(fileHandler);
 
             // Create a SimpleFormatter to format the log messages

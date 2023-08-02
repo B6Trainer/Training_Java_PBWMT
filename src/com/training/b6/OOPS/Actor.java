@@ -10,6 +10,9 @@ public abstract class Actor implements Citizen{
 
     private String profession="Actors";
 
+    static {
+        OOPSLoggerHelper.printOnConsole("Static block is executed");
+    }
     public BankAccount getMyBankAccount() {
         return myBankAccount;
     }
