@@ -12,7 +12,7 @@ public class Controller implements Constants {
     private static final String className=Controller.class.getSimpleName();
     private static final Processor procObj = new Processor();
 
-    private static AppConfiguration appConfiguration;
+    //private static AppConfiguration appConfiguration;
 
     /**
      * Controller's Entry method to service the request
@@ -24,6 +24,10 @@ public class Controller implements Constants {
         try {
 
             switch (executeMethod) {
+                case EXECUTE_INITIALISE_APPCONFIG:
+                    // Code block executed if expression matches Constants.EXECUTE_INITIALISE_APPCONFIG
+                    //initialiseConfiguration();
+                    break;
                 case EXECUTE_FILE_CONNECTION:
                     // Code block executed if expression matches Constants.EXECUTE_FILE_CONNECTION
                     executeFileConnectionExample();
@@ -35,10 +39,6 @@ public class Controller implements Constants {
                 case EXECUTE_AUTOCLOSE:
                     // Code block executed if expression matches Constants.EXECUTE_AUTOCLOSE
                     executeAutoCloseExample();
-                    break;
-                case EXECUTE_INITIALISE_APPCONFIG:
-                    // Code block executed if expression matches Constants.EXECUTE_INITIALISE_APPCONFIG
-                    initialiseConfiguratuon();
                     break;
                 // Add more cases as needed
                 default:
@@ -55,7 +55,7 @@ public class Controller implements Constants {
     }
 
 
-    private void initialiseConfiguratuon() throws IOException {
+ /*   private void initialiseConfiguration() throws IOException {
 
         appConfiguration=AppConfiguration.getInstance();
         String appName=appConfiguration.getProperty("app.name");
@@ -63,7 +63,7 @@ public class Controller implements Constants {
 
         LogHelper.printOnConsole(className,"App Name: "+appName);
         LogHelper.printOnConsole(className,"App Env: "+appEnv);
-    }
+    }*/
 
 
     private void executeAutoCloseExample(){

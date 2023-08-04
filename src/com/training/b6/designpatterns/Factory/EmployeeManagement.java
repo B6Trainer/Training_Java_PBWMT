@@ -1,4 +1,4 @@
-package com.training.b6.designpatterns;
+package com.training.b6.designpatterns.Factory;
 
 import com.training.b6.exceptionhandling.CustomAppException;
 

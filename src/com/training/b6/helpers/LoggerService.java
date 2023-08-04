@@ -10,6 +10,20 @@ import java.util.logging.SimpleFormatter;
 public class LoggerService {
     public static void main(String[] args) {
         // Create a Logger instance
+        Logger logger = getLogger(LoggerService.class.getSimpleName());
+
+        // Log some messages
+        logger.info("This is an informational message.");
+        logger.warning("This is a warning message.");
+        logger.severe("This is a severe message.");
+    }
+
+    private static String logLocation="C:/software/Projects/Local Workspace/GitHubLocation/Logs/";
+    private static String log_fileName="Training_app_logs.log";
+
+
+    public static Logger getLogger(String _className){
+        // Create a Logger instance
         Logger logger = Logger.getLogger(LoggerService.class.getSimpleName());
 
         // Set the log level to control which messages are logged
@@ -17,7 +31,7 @@ public class LoggerService {
 
         // Create a FileHandler to write log messages to a file
         try {
-            FileHandler fileHandler = new FileHandler("C:/software/Projects/Local Workspace/GitHubLocation/Logs/javalogs.log");
+            FileHandler fileHandler = new FileHandler(logLocation+log_fileName);
             logger.addHandler(fileHandler);
 
             // Create a SimpleFormatter to format the log messages
@@ -27,9 +41,6 @@ public class LoggerService {
             e.printStackTrace();
         }
 
-        // Log some messages
-        logger.info("This is an informational message.");
-        logger.warning("This is a warning message.");
-        logger.severe("This is a severe message.");
+        return logger;
     }
 }
